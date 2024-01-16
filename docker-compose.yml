@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  mariadb:
+    image: mariadb:latest
+    container_name: mariadb_container
+    environment:
+      DB_HOST: localhost
+      DB_PORT: 3306
+      DB_USER: dbuser
+      DB_PASS: v4wedsavhoqwd
+      DB_DATABASE: golangstarter
+    ports:
+      - "3306:3306"
+    volumes:
+      - mariadb_data:/var/lib/mysql
+
+volumes:
+  mariadb_data:
