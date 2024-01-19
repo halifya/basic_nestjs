@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { StandardRespInterface } from '../interface/helper.interface';
+import { StandardRespInterface } from '../../interface/helper.interface';
 
 @Injectable()
 export class HelthCheckService {
