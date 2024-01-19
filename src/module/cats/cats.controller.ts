@@ -3,7 +3,7 @@ import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { UpdateCatDto } from './dto/update-cat.dto';
 import { CatResInterface } from './interface/createCat.interface';
-import { StandardRespInterface } from '../interface/helper.interface';
+import { StandardRespInterface } from '../../interface/helper.interface';
 
 @Controller('cats')
 export class CatsController {
