@@ -5,9 +5,10 @@ import { CatsModule } from './cats/cats.module';
 import dbConfig from 'src/typeorm.config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { LoggerMiddleware } from './middleware/logger.middleware';
+import { HelthCheckModule } from './helth-check/helth-check.module';
 
 @Module({
-  imports: [CatsModule, TypeOrmModule.forRoot(dbConfig)],
+  imports: [CatsModule, TypeOrmModule.forRoot(dbConfig), HelthCheckModule],
   controllers: [AppController],
   providers: [AppService],
 })

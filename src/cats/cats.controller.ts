@@ -2,10 +2,8 @@ import { Controller, Get, Post, Body, Param, Delete, HttpCode, Put } from '@nest
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { UpdateCatDto } from './dto/update-cat.dto';
-import { Cat } from './entities/cat.entity';
 import { CatResInterface } from './interface/createCat.interface';
-import { Interface } from 'readline';
-import { StandardRespInterface } from './interface/helper.interface';
+import { StandardRespInterface } from '../interface/helper.interface';
 
 @Controller('cats')
 export class CatsController {
