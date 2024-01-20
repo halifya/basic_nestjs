@@ -24,11 +24,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev-path}}/cats",
+							"raw": "{{dev-path}}/api/v1/cats",
 							"host": [
 								"{{dev-path}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"cats"
 							]
 						}
@@ -50,11 +52,13 @@
 							}
 						},
 						"url": {
-							"raw": "{{dev-path}}/cats/2",
+							"raw": "{{dev-path}}/api/v1/cats/2",
 							"host": [
 								"{{dev-path}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"cats",
 								"2"
 							]
@@ -68,11 +72,13 @@
 						"method": "DELETE",
 						"header": [],
 						"url": {
-							"raw": "{{dev-path}}/cats/1",
+							"raw": "{{dev-path}}/api/v1/cats/1",
 							"host": [
 								"{{dev-path}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"cats",
 								"1"
 							]
@@ -86,11 +92,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev-path}}/cats/1",
+							"raw": "{{dev-path}}/api/v1/cats/1",
 							"host": [
 								"{{dev-path}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"cats",
 								"1"
 							]
@@ -104,11 +112,13 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "{{dev-path}}/cats",
+							"raw": "{{dev-path}}/api/v1/cats",
 							"host": [
 								"{{dev-path}}"
 							],
 							"path": [
+								"api",
+								"v1",
 								"cats"
 							]
 						}
@@ -123,9 +133,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{dev-path}}",
+					"raw": "{{dev-path}}/api/v1/helth-check",
 					"host": [
 						"{{dev-path}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"helth-check"
 					]
 				}
 			},
