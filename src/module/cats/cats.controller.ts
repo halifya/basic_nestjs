@@ -1,9 +1,10 @@
-import { Controller, Get, Post, Body, Param, Delete, HttpCode, Put } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, HttpCode, Put, UsePipes } from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { UpdateCatDto } from './dto/update-cat.dto';
 import { CatResInterface } from './interface/createCat.interface';
 import { StandardRespInterface } from '../../interface/helper.interface';
+import { ValidationPipe } from '../../validation/validation.pipe';
 
 @Controller('cats')
 export class CatsController {
@@ -11,6 +12,7 @@ export class CatsController {
 
   @Post()
   @HttpCode(200)
+  @UsePipes(ValidationPipe)
   async create(@Body() createCatDto: CreateCatDto) {
     const createCat = await this.catsService.create(createCatDto)
     const result : CatResInterface = {
@@ -44,6 +46,7 @@ export class CatsController {
   }
 
   @Put(':id')
+  @UsePipes(ValidationPipe)
   async update(@Param('id') id: string, @Body() updateCatDto: UpdateCatDto) {
     const updateCat = await this.catsService.update(+id, updateCatDto);
     const result : CatResInterface = {
