@@ -12,7 +12,6 @@ export class CatsController {
 
   @Post()
   @HttpCode(200)
-  @UsePipes(ValidationPipe)
   async create(@Body() createCatDto: CreateCatDto) {
     const createCat = await this.catsService.create(createCatDto)
     const result : CatResInterface = {
