@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Param, Delete, HttpCode, Put, UsePipes, BadGatewayException } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, HttpCode, Put, UsePipes } from '@nestjs/common';
 import { CatsService } from './cats.service';
 import { CreateCatDto } from './dto/create-cat.dto';
 import { UpdateCatDto } from './dto/update-cat.dto';
